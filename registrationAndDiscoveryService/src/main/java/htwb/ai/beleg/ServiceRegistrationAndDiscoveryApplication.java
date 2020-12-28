@@ -1,0 +1,14 @@
+package htwb.ai.beleg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class ServiceRegistrationAndDiscoveryApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceRegistrationAndDiscoveryApplication.class, args);
+    }
+}

@@ -1,0 +1,29 @@
+version: "3"
+services:
+  postgres-user:
+    image: "postgres"
+    container_name: "user"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=user
+    ports:
+      - "5432:5432"
+  postgres-songAndPlaylist:
+    image: "postgres"
+    container_name: "songAndPlaylist"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=songAndPlaylist
+    ports:
+      - "5432:5432"
+  mongodb:
+    image: mongo:latest
+    container_name: "song-related"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: test
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: songRelated
+    ports:
+      - 27017:27017

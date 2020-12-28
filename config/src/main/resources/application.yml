@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/dev/configrepo
+  application:
+    name: song-and-playlist-service.yml, songRelated.yml, user-service, gateway-service, eureka-discovery-service
+
+server:
+  port: 8888
+
